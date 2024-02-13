@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador de Textos</title>
+    <link rel="stylesheet" href="./STYLES/style.css">
+</head>
+
+
+<body class="paginaprincipal">
+
+    <header class="cabecalho">
+        <img class="imagem__cabecalho" src="/ASSETS/alura.svg" alt="Símbolo Alura">
+        <p class="titulo__cabecalho"> DECODIFICADOR DE TEXTOS</h1>
+    </header>
+
+
+
+    <main class="textos">
+        <p class="texto__subtitulo"> Escreva a mensagem que você quer criptografar/descriptografar. </p>
+        <p class="texto__aviso"> <img src="/ASSETS/aviso.svg" alt="Sinal de Aviso"> Apenas letras minúsculas e sem acento.</p>
+
+        <div class="botoes">
+            <textarea class="digitar__texto" name="nome" placeholder="Digite seu texto" wrap="hard"></textarea>
+        </div>
+
+        <div class="botoes">
+            <button onclick="verificarChute()" class="botoes__criptografar">Criptografar</button>
+            <button onclick="reiniciarJogo()" class="botoes__descriptografar">Descriptografar</button>
+        </div>
+
+        <div class="botoes">
+            <p class="texto__resposta">SUA RESPOSTA APARECE AQUI</p>
+        </div>
+
+        <div class="botoes">
+            <button onclick="" class="botoes__copiar" hidden disable >Copiar</button> 
+        </div>
+
+    </main>
+
+
+
+    <footer class="rodape">
+        <p class="rodape__texto"> AUTOR: FILLIPE SANTTOS - 2024</p>
+    </footer>
+
+
+
+    <script src="app.js" defer></script>
+</body>
+</html>
