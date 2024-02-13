@@ -14,7 +14,7 @@
 
     <header class="cabecalho">
         <img class="imagem__cabecalho" src="/ASSETS/alura.svg" alt="Símbolo Alura">
-        <h2 class="titulo__cabecalho"> Codificador e Decodificador de Textos</h2>
+        <h1 class="titulo__cabecalho"> CODIFICADOR E DECODIFICADOR DE TEXTOS</h1>
         <img class="imagem__cabecalho" src="/ASSETS/vazio.png" alt="Símbolo Alura">
     </header>
 
@@ -30,16 +30,17 @@
             </div>
 
             <div class="botoes">
-                <button onclick="verificarChute()" class="botoes__criptografar">Criptografar</button>
-                <button onclick="reiniciarJogo()" class="botoes__descriptografar">Descriptografar</button>
+                <button onclick="criptografar__texto()" class="botoes__criptografar">Criptografar</button>
+                <button onclick="descriptografar__texto()" class="botoes__descriptografar">Descriptografar</button>
             </div>
 
             <div class="botoes">
-                <p class="texto__resposta">Nenhuma mensagem encontrada <br> <strong class="subtexto_resposta"> Digite um texto que você deseja criptografar ou descriptografar. </strong> </p>
+                <p class="texto__resposta">Nenhuma mensagem encontrada <br> <strong class="subtexto_resposta"> Digite um texto que você deseja criptografar ou descriptografar.  </strong> </p>
             </div>
 
-            <div class="botoes">
-                <button onclick="" class="botoes__copiar" hidden disable >Copiar</button> 
+            <div class="botoes__inferiores">
+                <button onclick="copiar__texto()" class="botoes__copiar" hidden disable >Copiar</button> 
+                <button onclick="inverter__selecao()" class="botoes__inverter" hidden disable >Inverter</button>
             </div>
         </section>
     </main>

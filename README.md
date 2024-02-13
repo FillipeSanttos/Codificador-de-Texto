@@ -1,5 +1,5 @@
 
-# CONDIFICADOR DE TEXTOS 
+# CODIFICADOR E DECODIFICADOR DE TEXTOS 
 Este projeto cria um Codificador de Texto. Este projeto faz parte do Desafio 1 do Curso Alura+Oracle.
 
 

@@ -1,85 +1,100 @@
-let listaDeNumerosSorteados = [];
-let numeroLimite = 100;
-let numeroSecreto = gerarNumeroAleatorio();
-let tentativas = 1;
 
-function exibirTextoNaTela(tag, texto) {
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
-    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
-}
 
-// function exibirMensagemInicial() {
-//     exibirTextoNaTela('h1', 'Jogo do número secreto');
-//     exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
-// }
-
-exibirMensagemInicial();
-
-function verificarChute() {
-    var botao = document.querySelector(".botoes__copiar");                  //ATIVAR O BOTAO COPIAR
-    botao.removeAttribute("hidden");                                        //ATIVAR O BOTAO COPIAR
-    botao.removeAttribute("disable");                                       //ATIVAR O BOTAO COPIAR
+var validacao__texto = /^[a-z ]*$/;
 
 
 
-    let chute = document.querySelector('input').value;
-    
-    if (chute == numeroSecreto) {
-        exibirTextoNaTela('h1', 'Acertou!');
-        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
-        exibirTextoNaTela('p', mensagemTentativas);
-        document.getElementById('reiniciar').removeAttribute('disabled');
-    } else {
-        if (chute > numeroSecreto) {
-            exibirTextoNaTela('p', 'O número secreto é menor');
-        } else {
-            exibirTextoNaTela('p', 'O número secreto é maior');
-        }
-        tentativas++;
-        limparCampo();
+function criptografar__texto(){
+    let frase = document.querySelector('textarea').value;
+    if (validacao__texto.test(frase)) { // se o texto corresponde à expressão
+        console.log("o conteudo esta correto"); 
+        var botao = document.querySelector(".botoes__copiar");                  //ATIVAR O BOTAO COPIAR
+        botao.removeAttribute("hidden");                                        //ATIVAR O BOTAO COPIAR
+        botao.removeAttribute("disable");                                       //ATIVAR O BOTAO COPIAR
+        var botao = document.querySelector(".botoes__inverter");                  //ATIVAR O BOTAO COPIAR
+        botao.removeAttribute("hidden");                                        //ATIVAR O BOTAO COPIAR
+        botao.removeAttribute("disable");                                       //ATIVAR O BOTAO COPIAR
+        
+        var frase__criptografada = frase.replace(/e/g, "enter");
+        var frase__criptografada = frase__criptografada.replace(/i/g, "imes");
+        var frase__criptografada = frase__criptografada.replace(/a/g, "ai");
+        var frase__criptografada = frase__criptografada.replace(/o/g, "ober");
+        var frase__criptografada = frase__criptografada.replace(/u/g, "ufat");
+ 
+
+        console.log(frase__criptografada);
+
+
+        var mensagem__resolucao = document.querySelector(".texto__resposta")
+        mensagem__resolucao.innerHTML = frase__criptografada;
+        var elemento = document.querySelector(".texto__resposta");
+        elemento.style.backgroundImage = "none";
+
+
+    } 
+    else { // se o texto não corresponde à expressão
+        console.log("o conteudo possuí caracteres invalidos"); 
+        var mensagem__erro = document.querySelector(".texto__resposta")
+        mensagem__erro.innerHTML = "Caracteres inválidos digitados! <br> <strong class=\"subtexto_resposta\"> Tente novamente. </strong>";
+        var elemento = document.querySelector(".texto__resposta");
+        elemento.style.backgroundImage = "none";
     }
 }
 
-function gerarNumeroAleatorio() {
-    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
-    if (quantidadeDeElementosNaLista == numeroLimite) {
-        listaDeNumerosSorteados = [];
+
+
+function descriptografar__texto(){
+    let frase = document.querySelector('textarea').value;
+    if (validacao__texto.test(frase)) { // Verificar se o texto digitado é válido
+        
+        //ATIVAR O BOTAO COPIAR E INVERTER
+        var botao = document.querySelector(".botoes__copiar");                  
+        botao.removeAttribute("hidden");                                        
+        botao.removeAttribute("disable");                                       
+        var botao = document.querySelector(".botoes__inverter");                
+        botao.removeAttribute("hidden");                                        
+        botao.removeAttribute("disable");                                       
+
+        //Decodificar frases
+        var frase__criptografada = frase.replace(/ai/g, "a");
+        var frase__criptografada = frase__criptografada.replace(/enter/g, "e");
+        var frase__criptografada = frase__criptografada.replace(/imes/g, "i");
+        var frase__criptografada = frase__criptografada.replace(/ober/g, "o");
+        var frase__criptografada = frase__criptografada.replace(/ufat/g, "u");
+  
+
+        var mensagem__resolucao = document.querySelector(".texto__resposta")
+        mensagem__resolucao.innerHTML = frase__criptografada;
+        var elemento = document.querySelector(".texto__resposta");
+        elemento.style.backgroundImage = "none";
+
+     
+    }  
+    else { // Se o texto digitado não for válido
+        console.log("o conteudo possuí caracteres invalidos"); 
+        var mensagem__erro = document.querySelector(".texto__resposta")
+        mensagem__erro.innerHTML = "Caracteres inválidos digitados! <br> <strong class=\"subtexto_resposta\"> Tente novamente. </strong>";
+        var elemento = document.querySelector(".texto__resposta");
+        elemento.style.backgroundImage = "none";
     }
-    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
-        return gerarNumeroAleatorio();
-    } else {
-        listaDeNumerosSorteados.push(numeroEscolhido);
-        console.log(listaDeNumerosSorteados)
-        return numeroEscolhido;
-    }
 }
 
-function limparCampo() {
-    chute = document.querySelector('input');
-    chute.value = '';
+function copiar__texto(){
+    //Copiar o texto criptografrado/descriptografado
+    var elemento = document.querySelector(".texto__resposta");
+    var texto = elemento.innerText;
+    navigator.clipboard.writeText(texto);
 }
 
-function reiniciarJogo() {
-    var botao = document.querySelector(".botoes__copiar");                  //ATIVAR O BOTAO COPIAR
-    botao.removeAttribute("hidden");                                        //ATIVAR O BOTAO COPIAR
-    botao.removeAttribute("disable");                                       //ATIVAR O BOTAO COPIAR
-
-
-    numeroSecreto = gerarNumeroAleatorio();
-    limparCampo();
-    tentativas = 1;
-    exibirMensagemInicial();
-    document.getElementById('reiniciar').setAttribute('disabled', true)
+function inverter__selecao(){
+    //Copiar o texto criptografrado/descriptografado
+    var elemento = document.querySelector(".texto__resposta");
+    var texto = elemento.innerText;
+    navigator.clipboard.writeText(texto);
+    var frase__criptografada = texto;
+    //Substituir o box de digitar texto pelo texto criptografado/descriptografado
+    var textarea = document.querySelector(".digitar__texto");
+    var texto = frase__criptografada;
+    textarea.value = texto;
 }
-
-
-
-
-
-
-
-// let mensagem__escrita = 

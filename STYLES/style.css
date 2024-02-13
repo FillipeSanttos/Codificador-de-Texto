@@ -114,6 +114,7 @@ body{
 }
 .botoes__criptografar:hover{
     background-color: chartreuse;
+    cursor:pointer
 }
 
 
@@ -135,6 +136,7 @@ body{
 } 
 .botoes__descriptografar:hover{
     background-color: chartreuse;
+    cursor:pointer
 }
 
 
@@ -181,9 +183,16 @@ body{
     font-size: 16px;
 }
 
+.botoes__inferiores{
+    display: flex;
+    gap: 1.5rem;
+    /* justify-content: center; */
+    padding: 0% 0% 1% 0%;
+    margin: 15px;
+}
 
 .botoes__copiar{
-    background-color: #ffffff;
+    /* background-color: #ffffff;
     gap: 1.5rem;
     border: 0.125rem solid #0A3871;
     color: #0A3871;
@@ -194,13 +203,58 @@ body{
     font-size: 16px;
     padding: 1.34rem 0;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: none; */
+    background-color: #0A3871;
+    gap: 1.5rem;
+    border: 0.125rem solid #0A3871;
+    color: #FFFFFF;
+    width: 328px;
+    height: 67px;
+    text-align: center;
+    border-radius: 1.5rem;
+    font-size: 16px;
+    padding: 1.34rem 0;
+    font-weight: 600;
+    text-decoration: none
 } 
+
 
 .botoes__copiar:hover{
     background-color: chartreuse;
+    cursor:pointer
 }
 
+.botoes__inverter{
+    /* background-color: #ffffff;
+    gap: 1.5rem;
+    border: 0.125rem solid #0A3871;
+    color: #0A3871;
+    width: 680px;
+    height: 67px; 
+    text-align: center;
+    border-radius: 1.5rem;
+    font-size: 16px;
+    padding: 1.34rem 0;
+    font-weight: 600;
+    text-decoration: none; */
+    background-color: #0A3871;
+    gap: 1.5rem;
+    border: 0.125rem solid #0A3871;
+    color: #FFFFFF;
+    width: 328px;
+    height: 67px;
+    text-align: center;
+    border-radius: 1.5rem;
+    font-size: 16px;
+    padding: 1.34rem 0;
+    font-weight: 600;
+    text-decoration: none
+} 
+
+.botoes__inverter:hover{
+    background-color: chartreuse;
+    cursor:pointer
+}
 
 .rodape{
     background-color:#D8DFE8;
