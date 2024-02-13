@@ -15,14 +15,14 @@ body{
     opacity: 70%;
     display: flex;
     align-items: center;
-    height: 100px;
-    justify-content: space-between; 
+    height: 6.25rem;
+    justify-content: space-between;
 } 
 
 .titulo__cabecalho{
     font-weight: 500;
     font-family: var(--fonte-principal);
-    font-size: 32px;
+    font-size: 2rem;
     color: #0A3871;
 }
 
@@ -44,12 +44,12 @@ body{
 .texto__subtitulo{
     text-align: center;
     font-family: var(--fonte-principal);
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--cor-primaria);
 }
 
 .texto__aviso{
-    font-size: 12px;
+    font-size: 0.75rem;
     font-family: var(--fonte-principal);
     text-align: center;
     color: var(--cor-primaria);
@@ -57,14 +57,14 @@ body{
 
 .digitar__texto{
     font-family: var(--fonte-principal);
-    font-size: 24px;
+    font-size: 1.5rem;
     background-color: #ffffff;
     justify-content: center;
     gap: 1.5rem;
     border: none; 
     color: #0A3871;
-    width: 680px;
-    height: 200px;
+    width: 42.5rem;
+    height: 12.5rem;
     text-align:center;
     border-radius: 1.5rem;  
     padding: 1.34rem 0;
@@ -77,7 +77,7 @@ body{
     gap: 1.5rem;
     justify-content: center;
     padding: 0% 0% 1% 0%;
-    margin: 15px;
+    margin: 0.93rem;
 }
 
 .botoes__criptografar{
@@ -85,11 +85,11 @@ body{
     gap: 1.5rem;
     border: 0.125rem solid #0A3871;
     color: #FFFFFF;
-    width: 328px;
-    height: 67px;
+    width: 20.5rem;
+    height: 4.18rem;
     text-align: center;
     border-radius: 1.5rem;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 1.34rem 0;
     font-weight: 600;
     text-decoration: none
@@ -105,11 +105,12 @@ body{
     gap: 1.5rem;
     border: 0.125rem solid;
     color: #0A3871;
-    width: 328px;
-    height: 67px;
+    width: 20.5rem;
+    height: 4.18rem;
+    height: 67px; 
     text-align: center;
     border-radius: 1.5rem;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 1.34rem 0;
     font-weight: 600;
     text-decoration: none
@@ -124,7 +125,7 @@ body{
     gap: 1.5rem;
     justify-content: center;
     padding: 0% 0% 1% 0%;
-    margin: 15px;
+    margin: 0.93rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -133,7 +134,7 @@ body{
 
 .texto__resposta{
     font-family: var(--fonte-principal);
-    font-size: 24px;
+    font-size: 1.5rem;
     background-color: #ffffff;
     background-image: url(/ASSETS/figura-vazio2.png);
     background-position: center;
@@ -143,25 +144,25 @@ body{
     gap: 1.5rem;
     border: none; 
     color: #0A3871;
-    width: 680px;
-    height: 200px;
+    width: 42.5rem;
+    height: 12.5rem;
     text-align:center;
     border-radius: 1.5rem;
     padding: 1.34rem 0;
     font-weight: 600;
-    word-break: break-all;
+    word-break: break-word;
     text-decoration: none;
 }
 
 .subtexto_resposta{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .botoes__inferiores{
     display: flex;
     gap: 1.5rem;
     padding: 0% 0% 1% 0%;
-    margin: 15px;
+    margin: 0.93rem;
 }
 
 .botoes__copiar{
@@ -169,11 +170,11 @@ body{
     gap: 1.5rem;
     border: 0.125rem solid #0A3871;
     color: #FFFFFF;
-    width: 328px;
-    height: 67px;
+    width: 20.5rem;
+    height: 4.18rem;
     text-align: center;
     border-radius: 1.5rem;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 1.34rem 0;
     font-weight: 600;
     text-decoration: none
@@ -189,11 +190,11 @@ body{
     gap: 1.5rem;
     border: 0.125rem solid #0A3871;
     color: #FFFFFF;
-    width: 328px;
-    height: 67px;
+    width: 20.5rem;
+    height: 4.18rem;
     text-align: center;
     border-radius: 1.5rem;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 1.34rem 0;
     font-weight: 600;
     text-decoration: none
@@ -212,13 +213,197 @@ body{
     justify-content: end;
     margin: 0%;
     padding: 0% 1% 0% 0%;
-    height: 100px;        
+    height: 6,25rem;    
     align-items: end;
 }
 
 .rodape__texto{
     font-weight: 500;
     font-family: var(--fonte-principal);
-    font-size: 32px;
+    font-size: 2rem;
     text-align: end;
+}
+
+/* Adaptação a diferentes tamanhos de tela */
+ @media (max-width: 750px){
+    body{
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .cabecalho{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3% 0% 3% 10%;
+    }
+
+    .titulo__cabecalho{
+        text-align: justify;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+        padding: 0 auto; 
+    }
+
+    .conteudo{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:90%;
+        margin: 0 auto;
+    }
+
+    .textos{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+        padding: 3% 3% 3% 3%;
+    }
+
+    .texto__subtitulo{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .texto__aviso{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .digitar__texto{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .botoes{
+        gap:1.5rem;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .botoes__criptografar{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    botoes__criptografar:hover{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .botoes__descriptografar{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .texto__resposta{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;    
+    }
+
+    .subtexto_resposta{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto; 
+    }
+
+    .botoes__inferiores{
+        gap: 1.5rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        margin: 0 auto;
+        text-align: center;
+        margin: 0 auto;
+        display: block; 
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .botoes__copiar{
+        gap: 50px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        margin: 0 auto;
+        text-align: center;
+        margin: 0 auto;
+        display: block; 
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .botoes__inverter{
+        gap: 50px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        margin: 0 auto;
+        text-align: center;
+        margin: 0 auto;
+        display: block; 
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .rodape{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .rodape__texto{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        width:100%;
+        margin: 0 auto;
+        word-break: break-all;
+    }
 }
