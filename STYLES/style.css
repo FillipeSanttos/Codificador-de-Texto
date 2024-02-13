@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url(./ASSETS/fundo.jpg);
+    background-image: url(../ASSETS/fundo.jpg);
     background-size: cover;
 }
 
@@ -136,7 +136,7 @@ body{
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     background-color: #ffffff;
-    background-image: url(./ASSETS/figura-vazio2.png);
+    background-image: url(../ASSETS/figura-vazio2.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;   
