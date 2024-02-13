@@ -15,17 +15,19 @@ body{
 }
 
 .cabecalho{
-    background-color: rgb(255, 255, 255);
-    color: var(--cor-primaria);
+    background-color:#D8DFE8;
     opacity: 70%;
-    display: flex; 
-    gap: 30%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between; 
 } 
 
 .titulo__cabecalho{
     font-weight: 500;
     font-family: var(--fonte-principal);
     font-size: 32px;
+    color: #0A3871;
 }
 
 .textos{
@@ -168,16 +170,21 @@ body{
     background-color: chartreuse;
 }
 
+
 .rodape{
-    background-color: rgb(255, 255, 255);
+    background-color:#D8DFE8;
     color: var(--cor-primaria);
     opacity: 70%;
-    display: flex;
+    display: flex; 
     justify-content: end;
-    padding: 0% 3% 0% 0%;
+    margin: 0%;
+    padding: 0% 1% 0% 0%;*/
+    height: 100px;        
+    align-items: end;
 }
 .rodape__texto{
     font-weight: 500;
     font-family: var(--fonte-principal);
-    font-size: 16px;
+    font-size: 32px;
+    text-align: end;
 }
