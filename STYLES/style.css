@@ -30,11 +30,24 @@ body{
     color: #0A3871;
 }
 
+.conteudo{
+    display: flex;
+    justify-content: center;
+    padding: 1.34rem 0;
+}
+
+
 .textos{
+    box-sizing: border-box;
     background-color: #D8DFE8;
-    margin: 0px 400px 0px 400px;
-    border: 0.125rem transparent;
-    border-radius: 1.5rem
+    /* margin: 0px 25dvi 0px 25dvi; */
+    margin: 0px 25% 0px 25%;
+    /* padding: 0% 50% 0% 50%; */
+    /* display:flexbox;
+    border: 0.125rem transparent; */
+    border-radius: 1.5rem;
+    justify-content: center;
+    text-align:center;
 }
 
 
@@ -85,7 +98,6 @@ body{
 
 
 
-
 .botoes__criptografar{
     background-color: #0A3871;
     gap: 1.5rem;
@@ -127,7 +139,19 @@ body{
 
 
 
-
+.botoes__resposta{
+   
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 0% 0% 1% 0%;
+    margin: 15px;
+  
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 
@@ -135,6 +159,10 @@ body{
     font-family: var(--fonte-principal);
     font-size: 24px;
     background-color: #ffffff;
+    background-image: url(/ASSETS/figura-vazio2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;   
     justify-content: center;
     gap: 1.5rem;
     border: none; 
@@ -149,6 +177,9 @@ body{
     text-decoration: none;
 }
 
+.subtexto_resposta{
+    font-size: 16px;
+}
 
 
 .botoes__copiar{
@@ -178,7 +209,7 @@ body{
     display: flex; 
     justify-content: end;
     margin: 0%;
-    padding: 0% 1% 0% 0%;*/
+    padding: 0% 1% 0% 0%;
     height: 100px;        
     align-items: end;
 }
